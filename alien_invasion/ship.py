@@ -1,11 +1,13 @@
 """ 飞船类 """
 
 import pygame
+from pygame.sprite import Sprite
 
-class Ship():
+class Ship(Sprite):
 	"""飞船类"""
 	def __init__(self, ai_settings, screen):
 		""" 初始化飞船图像并设置其初始位置 """
+		super(Ship,self).__init__()
 		self.screen = screen
 		self.ai_settings = ai_settings
 		

@@ -44,7 +44,7 @@ def rum_game():
 	# 开始游戏的主循环
 	while True:
 		# 监视键盘和鼠标事件
-		gf.check_events(ai_settings, screen, stats, play_button, ship, aliens, bullets)
+		gf.check_events(ai_settings, screen, stats, sb, play_button, ship, aliens, bullets)
 		if stats.game_active:
 			ship.update()
 			
@@ -52,7 +52,7 @@ def rum_game():
 			gf.update_bullets(ai_settings, screen, stats, sb, ship, aliens, bullets)
 
 			# 更新外星人位置
-			gf.update_aliens(ai_settings, stats, screen, ship, aliens, bullets)
+			gf.update_aliens(ai_settings, screen, stats, sb, ship, aliens, bullets)
 
 		# 每次循环时都会重新绘制屏幕
 		# 让最近的绘制的在屏幕可见
